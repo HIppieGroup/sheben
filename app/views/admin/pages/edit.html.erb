@@ -1,0 +1,7 @@
+<h2>
+	Изменение текста сайта
+</h2>
+
+<%= simple_form_for(Page.first, :url => { :action => "update" })  do |f| %>
+<%= render 'form', f: f %>
+<% end %>

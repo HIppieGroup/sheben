@@ -1,0 +1,35 @@
+<div class="col-md-8">
+	<% @item.each do |item| %>
+	<div class="box-item clearfix">
+		<div class="box-item__img">
+			<%= image_tag item.image, class:"box-item__image" %>
+		</div>
+		<div class="box-text">
+			<h3 class="box-text__head"><%=item.title%></h3>
+		
+			<% if !(item.fraction_two=='' && item.fraction_two=='' && item.fraction_three=='') %>
+			<p class="box-text__description">
+				<span class="sep">Фракции щебня</span>
+				<% if !(item.fraction_one=='') %>
+					<span class="sep"><%=item.fraction_one %></span>
+				<% end %>
+				<% if !(item.fraction_two=='') %>
+					<span class="sep"><%=item.fraction_two%></span>
+				<% end %>
+				<% if !(item.fraction_three=='') %>
+					<span class="sep"><%=item.fraction_three%></span>
+				<% end %>
+			</p>
+			<% end -%>
+			<p class="box-text__text">
+				<%= item.description %>
+			</p>
+			<% if !(item.many==nil) %>
+			<span class="box-text__many">
+				<%=item.many%> руб.м<span class="box-text__many-cub">3</span>
+			</span>
+			<%end%>
+		</div>
+	</div>
+	<% end %>
+</div>

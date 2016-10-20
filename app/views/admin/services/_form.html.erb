@@ -1,0 +1,11 @@
+<%= simple_form_for [:admin, @service] do |f| %>
+
+	<%= f.input	:image, as: :file,	label: 'Изображение услуги'			%>
+	<%= f.input	:title,				label: 'Название услуги'			%>
+	<%= f.input	:description,		label: 'Описание услуги'			%>
+	<%= f.input	:many,				label: 'Цена услуги'				%>
+	<%=	f.input :gorizont,			label: 'Горизонтальное положение'	%>
+
+	<%= f.button :submit, 'Отправить', class: "btn btn-success" %>
+
+<% end %>

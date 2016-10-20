@@ -1,0 +1,38 @@
+<header class="page-header" id="home" >
+	<%= render "page_header" %>
+	<%= render "nav" %>
+</header>
+<section class="inform">
+	<div class="container">
+		<div class="row">
+			<%= render "feedback" %>
+			<%= render "slide" %>
+			<%= render "materials_head" %>
+		</div>
+	</div>
+</section>
+<main>
+	<div class="container">
+		<div class="row">
+			<%= render "item" %>
+			<%= render "sidebar" %>
+		</div>
+	</div>
+</main>
+<section>
+	<div class="main-header clearfix" id="servise">
+		<div class="col-md-12">
+			<h2 class="main-header__head">АРЕНДА СПЕЦТЕХНИКИ И ДОП. УСЛУГИ</h2>
+			<p class="main-header__description main-header__description-little">Аренда всей предоставляемой специальной техники осуществляеться только при заказе от 3 часов работ</p>
+		</div>
+	</div>
+</section>
+<section class="renta">
+	<div class="container">
+		<div class="row">			
+			<%= render "service" %>
+			<%= render "footer_text" %>							
+		</div>
+	</div>
+</section>
+<%= render "footer" %>

@@ -1,0 +1,41 @@
+<div class="col-md-12">
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h3>Товары</h3>
+		</div>
+	</div>
+	<table class="table table-striped">
+		<tr>
+			<th>Название товара</th>
+			<th>Цена</th>
+			<th>Сайдбар</th>
+			<th>Отображение</th>
+			<th></th>
+			<th></th>
+		</tr>
+		<% @item.each do |i| %>
+			<tr>
+				<td><%= i.title %></td>
+				<td><%= i.many %></td>
+				<td>
+					<%= if i.sidebar 
+						render plain: "Правый столбец"
+					else
+						render plain: "Левый столбец"
+						end%>
+
+				</td>
+				<td>
+					<%= if i.invis 
+						render plain: "На сайте" 
+					else
+						render plain: "Cкрыто" 
+					end%>
+				</td>
+				<td><%= link_to 'Редактировать', edit_admin_item_path(i), class: "btn btn-warning" %></td>
+				<td><%= link_to 'Удалить', admin_item_path(i), class: "btn btn-danger", method: :delete, data: {confirm: 'Вы уверены?'} %></td>
+			</tr>
+		<% end %>
+	</table>
+	<%= link_to 'Создать новый товар', new_admin_item_path, class: "btn btn-success" %>
+</div>

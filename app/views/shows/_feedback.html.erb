@@ -1,0 +1,17 @@
+<div class="feedback clearfix">
+	<div class="col-md-4">
+		<div class="feedback__time">
+			<p class="feedback__text">Мы работаем без выходных</p><i class="icon icon-time icon-time-red"></i>
+		</div>	
+	</div>
+	<div class="col-md-3 col-md-offset-5">
+		<div class="feedback__info">
+			<% if !(@page.phone=='') %>
+			<a  class="feedback__link" href="tel:89106494674"><i class="icon icon-phone"></i>tell: <%= @page.phone %></a>
+			<% end %>
+			<% if !(@page.email=='') %>
+			<a  class="feedback__link" href="mailto:info@sheben-tver.ru"><i class="icon icon-mail"></i>Mail: <%=@page.email %></a>
+			<% end %>
+		</div>
+	</div>
+</div>

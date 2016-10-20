@@ -1,0 +1,31 @@
+<% @service_v.each do |serv_v| %>
+<div class="col-md-4">
+	<div class="rent-item clearfix">
+		<div class="rent-item__image">
+			<%= image_tag serv_v.image, class: "rent-item__picture" %>
+		</div>
+		<div class="rent-item__text">
+			<h3 class="rent-item__head"><%= serv_v.title %></h3>
+			<p class="rent-item__description">
+				<%= serv_v.description %>
+			</p>
+			<p class="rent-item__many"><%= serv_v.many %> руб./час</p>
+		</div>
+	</div>
+</div>
+<% end %>
+
+<% @service_g.each do |serv_g| %>
+<div class="col-md-12">
+	<div class="rent-item clearfix">
+		<div class="rent-item__text">
+			<h3 class="rent-item__head rent-item__head-gorizont"><%= serv_g.title %> </h3>
+			<p class="rent-item__description rent-item__description-gorizont">
+				<%= serv_g.description %>
+			</p>
+			<p class="rent-item__many"><%= serv_g.many %> руб./час</p>
+		</div>
+	</div>
+</div>
+<% end %>
+

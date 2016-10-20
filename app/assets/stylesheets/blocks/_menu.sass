@@ -1,0 +1,55 @@
+.menu__list
+	list-style: none
+	padding: 0
+	margin: 0
+
+.menu__item
+	position: relative
+	display: inline-block
+	line-height: em(14px)
+.menu__item::after
+	content: ''
+	position: absolute
+	top: 50%
+	right: 0
+	display: block
+	width: 1px
+	height: 14px
+	margin-top: -7px
+	background-color: rgba(255,255,255,0.1)
+
+.menu__item:last-child:after
+	display: none
+.menu__link
+	position: relative
+	display: block
+	padding: 25px 20px
+	font-size: em(13px)
+	color: #fff
+	transition: all 0.3s ease-in-out
+.menu__link::after
+	content: ''
+	position: absolute
+	bottom: 0px
+	left: 50%
+	display: block
+	height: 4px
+	width: 50px
+	margin-left: -25px
+	opacity: 0
+	background-color: #f26c4f
+	transition: all 0.3s ease-in-out
+.menu__link:hover
+	text-decoration: none
+	color: #fff
+	@extend .menu__link-active
+.menu__link:focus
+	text-decoration: none
+	outline: none
+	color: #fff
+
+.menu__link-active
+	color: #fff
+	text-decoration: none
+.menu__link-active::after
+	opacity: 1

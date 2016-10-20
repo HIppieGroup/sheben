@@ -1,0 +1,13 @@
+<%= simple_form_for [:admin, @item]  do |f| %>
+	<%= f.input :image, as: :file,	label: 'Изображение товара' %>
+	<%= f.input :title,				label: 'Название товара' %>
+	<%= f.input :description,		label: 'Описание товара' %>
+	<%= f.input :fraction_one,		label: 'Первая фракция' %>
+	<%= f.input :fraction_two,		label: 'Вторая фракция' %>
+	<%= f.input :fraction_three,	label: 'Третья фракция' %>
+	<%= f.input :many,				label: 'Цена товара' %>
+	<%= f.input :invis,				label: 'Показывать товар' %>
+	<%= f.input :sidebar,			label: 'Перенести в сайдбар' %>
+
+	<%= f.button :submit, 'Отправить', class: "btn btn-success" %>
+<% end %>

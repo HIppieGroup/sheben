@@ -1,0 +1,25 @@
+<div class="col-md-4">
+	<% @sidebar.each do |sidebar| %>
+	<div class="min-item clearfix">
+		<%= image_tag sidebar.image, class: "min-item__img" %>
+		<div class="box-text box-text-dark">
+			<h3 class="box-text__head box-text__head-dark"><%= sidebar.title %></h3>
+			<span class="box-text__many">
+				<%= sidebar.many %> руб.м<span class="box-text__many-cub">3</span>
+			</span>
+		</div>
+	</div>
+	<% end %>
+	
+	<div class="about" id="about">
+		<h2 class="about__head"><%= @page.about_title %></h2>
+		<p class="about__text">
+			<%= @page.about_description %>
+		</p>
+		<p class="about__auther">С уважением компания СсТ</p>
+	</div>
+	<div class="action">
+		<a class="action__btn" href="#"><i class="icon icon-phone icon-phone-white "></i>Заказать обратный звонок</a>
+		<a class="action__btn" href="#"><i class="icon icon-seil icon-seil-white"></i>Оформить заказ сейчас</a>
+	</div>
+</div>
